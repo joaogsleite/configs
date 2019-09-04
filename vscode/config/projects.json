@@ -1,0 +1,44 @@
+[
+	{
+		"name": "configs",
+		"rootPath": "$home/Developer/configs",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "Notes",
+		"rootPath": "$home/Developer/notes",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "DevNotes",
+		"rootPath": "$home/Developer/devnotes",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "ISTsat-1 SW",
+		"rootPath": "$home/Developer/ISTsat-1/Software",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "Docker",
+		"rootPath": "$home/Developer/docker",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "Owlet",
+		"rootPath": "$home/Developer/owlet",
+		"paths": [],
+		"group": ""
+	},
+	{
+		"name": "SDN Thesis",
+		"rootPath": "$home/Developer/thesis",
+		"paths": [],
+		"group": ""
+	}
+]

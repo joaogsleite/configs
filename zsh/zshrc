@@ -1,0 +1,74 @@
+# oh-my-zsh settings
+ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="jnrowe"
+ZSH_DISABLE_COMPFIX=true
+DEFAULT_USER=`whoami`
+#KEYTIMEOUT=1
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOSTART_ONCE=true
+plugins=(zsh-autosuggestions zsh-syntax-highlighting gitfast extract docker jsontools vi-mode brew)
+source $ZSH/oh-my-zsh.sh
+
+# default text editor
+export VISUAL="vim"
+export EDITOR="vim"
+
+# ====================================
+# ALIAS
+# ====================================
+
+# macOS like
+alias pbcopy="xclip -selection clipboard"
+alias pbpaste="xclip -o"
+alias openup="xdg-open"
+
+# difficult commands
+alias vino="/usr/lib/vino/vino-server"
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias flushdns="sudo killall -HUP mDNSResponder"
+alias ldot='ls -d .*'
+alias r="source ~/.zshrc"
+
+# abbreviations
+alias clc="clear"
+alias q="exit"
+alias size="du -sh "
+
+# edit configs
+export CONF_EDITOR="$EDITOR"
+alias zshconf="$CONF_EDITOR ~/.zshrc"
+alias gitconf="$CONF_EDITOR ~/.gitconfig"
+alias sshconf="$CONF_EDITOR ~/.ssh/config"
+alias vimconf="$CONF_EDITOR ~/.vimrc"
+alias tmuxconf="$CONF_EDITOR ~/.tmux.conf"
+alias ohmyzsh="$CONF_EDITOR ~/.oh-my-zsh"
+alias octaveconf="$CONF_EDITOR ~/.octaverc"
+alias hostsconf="sudo $CONF_EDITOR /etc/hosts"
+alias dockerconf="$CONF_EDITOR ~/.docker-machine"
+
+
+# ====================================
+# SPECIFIC SETTINGS FOR PACKAGES
+# ====================================
+
+# for docker machine
+source ~/.docker-machine
+
+# fonts for xquartz apps
+#export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
+#export LANGUAGE=en_US.UTF-8
+#export LANG=en_US.UTF-8
+#export LC_ALL=en_US.UTF-8
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+load_nvm() {
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+}
+npx() { unset -f npx  ; load_nvm ; npx  "$@" }
+nvm() { unset -f nvm  ; load_nvm ; nvm  "$@" }
+node(){ unset -f node ; load_nvm ; node "$@" }
+npm() { unset -f npm  ; load_nvm ; npm  "$@" }
+task() { npm run task -- $@ }
+

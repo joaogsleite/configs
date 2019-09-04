@@ -1,0 +1,96 @@
+
+" BASIC
+" ==================
+set nocompatible
+filetype off  
+set number
+"set t_Co=256
+syntax enable
+filetype plugin on
+filetype plugin indent on
+set encoding=utf-8
+set showcmd
+set backspace=2
+set ruler           " show the cursor position at all times
+set showmatch       " brackets/braces that is
+set mat=5           " duration to show matching brace (1/10 sec)
+set shortmess=at
+set splitbelow      " new hoz splits go below
+set splitright      " new vert splits go right
+set hidden          " allow changing buffers without saving
+set mouse=a
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
+set scrolloff=5
+set laststatus=2  " Always show the statusline
+
+
+" MAPS
+" ==================
+let mapleader = "\<Space>"
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
+set scrolloff=5
+nnoremap <leader>. :e ~/.vimrc<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>\ :NERDTreeToggle<CR>
+nnoremap <leader>f :tabnew **/
+:imap jk <Esc>
+:imap JK <Esc>
+nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
+
+" disable arrow keys
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+
+" VISUAL
+" ==================
+syntax on
+syntax enable
+hi StatusLine ctermbg=7 ctermfg=0
+set background=dark
+colorscheme molokai
+set laststatus=2  " Always show the statusline
+
+" SPACING
+" ==================
+set tabstop=4
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set colorcolumn=80
+set autoindent      " turns it on
+set smartindent     " does the right thing (mostly) in programs
+
+
+" AUTO RELOAD ~/.vimrc
+" ==================
+augroup reload_vimrc " {
+    autocmd!
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END " }
+
+
+" SEARCHING
+" ==================
+set ignorecase      " ignore case when searching
+set smartcase       " unless the search term contains uppercase chars
+set incsearch       " find the next match as the search term is being typed
+set hlsearch        " highlight search matches Wrap text instead of being on one line
+
+
+" SWP
+" ==================
+set swapfile    " Use a separate dir for swap files
+set directory=~/.vim/swp   " List of directory names for the swap files.
+set undofile " Enable persistent undo
+set undodir=~/.vim/undo  " Store undofiles in a tmp dir
+

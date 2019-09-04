@@ -1,0 +1,144 @@
+{
+  // Interface
+  "workbench.activityBar.visible": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.iconTheme": "file-icons",
+  "workbench.statusBar.visible": true,
+  "workbench.editor.revealIfOpen": true,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#383838",
+    "statusBar.noFolderBackground": "#383838"
+  },
+  "window.zoomLevel": 1,
+  "window.newWindowDimensions": "maximized",
+  "window.menuBarVisibility": "toggle",
+  "window.title": "${rootName}${separator}${activeEditorShort}",
+  "window.titleBarStyle": "native",
+  "workbench.settings.editor": "json",
+
+  // Editor
+  "editor.minimap.enabled": false,
+  "editor.fontSize": 14,
+  "breadcrumbs.enabled": true,
+  "editor.tabCompletion": "on",
+  "editor.snippetSuggestions": "inline",
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.autoIndent": true,
+  "editor.find.autoFindInSelection": true,
+  "editor.hover": false,
+  //"editor.hover.enabled": false,
+  //"editor.hover.sticky": false,
+  //"editor.hover.delay": 999999999,
+  "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false
+  },
+  "editor.quickSuggestionsDelay": 999999999,
+  "editor.tabSize": 2,
+  "editor.rulers": [80],
+  "editor.insertSpaces": true,
+  "auto-close-tag.fullMode": false,
+
+  // Explorer
+  "explorer.autoReveal": false,
+  "explorer.openEditors.visible": 0,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.quickOpen.closeOnFocusLost": true,
+
+  // Terminal
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.lineHeight": 1.5,
+  "terminal.integrated.shell.linux": "/bin/zsh",
+  "terminal.integrated.rendererType": "dom",
+
+  // Languages
+  "javascript.suggest.names": false,
+  "javascript.updateImportsOnFileMove.enabled": "prompt",
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "files.associations": {
+    "*.m": "matlab",
+    "*.js": "javascriptreact"
+  },
+
+  // Vim
+  "vim.easymotion": true,
+  "vim.sneak": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": false,
+  "vim.useCtrlKeys": false,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    { "before": ["j", "k"], "after": ["<Esc>"] }
+  ],
+  "vim.leader": "<space>",
+
+  // PLUGINS ==============
+  "docker.showExplorer": false,
+  "projectManager.showProjectNameInStatusBar": true,
+  "php.executablePath": "/usr/local/Cellar/php/7.2.3_2/bin/php",
+  "python.linting.pylintArgs": ["--errors-only"],
+  "matlab.mlintpath": "/Applications/MATLAB_R2017a.app/bin/maci64/mlint",
+  "git.enableSmartCommit": true,
+  "todo-tree.defaultHighlight": {
+    "icon": "alert",
+    "type": "text",
+    "foreground": "white",
+    "background": "blue",
+    "opacity": 60,
+    "iconColour": "white"
+  },
+
+  // Latex workshop
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "build",
+      "tools": ["wait", "clean", "build", "wait"]
+    },
+    {
+      "name": "clean",
+      "tools": ["clean"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "clean",
+      "command": "rm",
+      "args": [
+        "-f",
+        "*.aux main.lo* *.maf main.mlf* main.mlt* main.mtc* *.soc *.out *.toc *.bbl *.blg *.glg *.glo *.gls *.ilg *.ist *.lof *.log *.lot *.nlo *.nls"
+      ]
+    },
+    {
+      "name": "wait",
+      "command": "sleep",
+      "args": ["5"]
+    },
+    {
+      "name": "build",
+      "command": "pdflatex",
+      "args": ["-synctex=1", "%DOC%.tex"]
+    }
+  ],
+
+  // GitLens
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.hovers.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.views.repositories.location": "scm",
+  "gitlens.views.fileHistory.location": "scm",
+  "gitlens.views.lineHistory.location": "scm",
+  "gitlens.views.search.location": "scm",
+  "gitlens.views.compare.location": "scm",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.sideBar.location": "left",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
+}
