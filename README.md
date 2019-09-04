@@ -1,7 +1,7 @@
 
 # Configs
 
-Personal ubuntu linux configurations
+Personal linux machine configs
 
 ![Screenshot](./screenshot.png)
 
