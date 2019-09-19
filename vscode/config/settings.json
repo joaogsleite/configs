@@ -75,19 +75,17 @@
   "vim.leader": "<space>",
 
   // PLUGINS ==============
-  "docker.showExplorer": false,
-  "projectManager.showProjectNameInStatusBar": true,
   "php.executablePath": "/usr/local/Cellar/php/7.2.3_2/bin/php",
   "python.linting.pylintArgs": ["--errors-only"],
   "matlab.mlintpath": "/Applications/MATLAB_R2017a.app/bin/maci64/mlint",
   "git.enableSmartCommit": true,
-  "todo-tree.defaultHighlight": {
-    "icon": "alert",
-    "type": "text",
-    "foreground": "white",
-    "background": "blue",
-    "opacity": 60,
-    "iconColour": "white"
+
+  // macros
+  "macros": {
+    "toggleTerminal": [
+      "workbench.action.terminal.toggleTerminal",
+      "workbench.action.toggleMaximizedPanel",
+    ]
   },
 
   // Latex workshop
@@ -140,5 +138,16 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-  }
+  },
+  "aws.profile": "default",
+  "aws.samcli.location": "/home/joaoleite/.local/bin/sam",
+  "todo-tree.highlights.defaultHighlight": {
+    "icon": "alert",
+    "type": "text",
+    "foreground": "white",
+    "background": "blue",
+    "opacity": 60,
+    "iconColour": "white"
+  },
+  "explorer.confirmDelete": false
 }

@@ -48,10 +48,13 @@
 
     // Terminal
     // =============================
-    { "key":"ctrl+shift+t",   "command":"workbench.action.toggleMaximizedPanel" },
-    { "key":"ctrl+shift+[",   "command":"workbench.action.terminal.focusPrevious",      "when": "terminalFocus" },
-    { "key":"ctrl+shift+]",   "command":"workbench.action.terminal.focusNext",          "when": "terminalFocus" },
+    { "key": "ctrl+`",        "command": "macros.toggleTerminal",                       "when": "!terminalFocus" },
+    { "key": "ctrl+shift+t",  "command": "" },
+    { "key": "ctrl+shift+t",  "command": "workbench.action.toggleMaximizedPanel",       "when": "terminalFocus" },
+    { "key": "ctrl+shift+[",  "command": "workbench.action.terminal.focusPrevious",     "when": "terminalFocus" },
+    { "key": "ctrl+shift+]",  "command": "workbench.action.terminal.focusNext",         "when": "terminalFocus" },
     { "key": "ctrl+shift+\\", "command": "workbench.action.terminal.split",             "when": "terminalFocus" },
+    { "key": "ctrl+shift+-",  "command": "workbench.action.terminal.split",             "when": "terminalFocus" },
     { "key": "ctrl+shift+h",  "command": "workbench.action.terminal.focusPreviousPane", "when": "terminalFocus" },
     { "key": "ctrl+shift+l",  "command": "workbench.action.terminal.focusNextPane",     "when": "terminalFocus" },
 

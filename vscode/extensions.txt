@@ -1,4 +1,3 @@
-alefragnani.project-manager
 ban.spellright
 bierner.color-info
 clinyong.vscode-css-modules
@@ -14,9 +13,11 @@ felixfbecker.php-intellisense
 file-icons.file-icons
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
+geddski.macros
 Gimly81.matlab
 goessner.mdmath
 Gruntfuggly.todo-tree
+humao.rest-client
 IBM.output-colorizer
 James-Yu.latex-workshop
 jdforsythe.add-new-line-to-files
@@ -24,14 +25,15 @@ konstantin.wrapSelection
 mikestead.dotenv
 ms-azure-devops.azure-pipelines
 ms-python.python
+ms-vscode.azure-account
 ms-vscode.cpptools
 ms-vscode.node-debug2
 ms-vscode.vscode-typescript-tslint-plugin
 ms-vsliveshare.vsliveshare
 msjsdiag.debugger-for-chrome
-mtxr.sqltools
 npxms.hide-gitignored
 nwallace.peep
+Prisma.vscode-graphql
 rafaelmaiolla.remote-vscode
 redhat.java
 robinbentley.sass-indented
