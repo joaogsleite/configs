@@ -1,8 +1,7 @@
 {
   // Interface
-  "workbench.activityBar.visible": true,
+  "workbench.activityBar.visible": false,
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.iconTheme": "file-icons",
   "workbench.statusBar.visible": true,
   "workbench.editor.revealIfOpen": true,
   "workbench.colorCustomizations": {
@@ -25,10 +24,6 @@
   "editor.acceptSuggestionOnEnter": "smart",
   "editor.autoIndent": true,
   "editor.find.autoFindInSelection": true,
-  "editor.hover": false,
-  //"editor.hover.enabled": false,
-  //"editor.hover.sticky": false,
-  //"editor.hover.delay": 999999999,
   "editor.quickSuggestions": {
     "other": false,
     "comments": false,
@@ -39,6 +34,7 @@
   "editor.rulers": [80],
   "editor.insertSpaces": true,
   "auto-close-tag.fullMode": false,
+  "editor.suggestSelection": "first",
 
   // Explorer
   "explorer.autoReveal": false,
@@ -46,6 +42,7 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.quickOpen.closeOnFocusLost": true,
+  "workbench.sideBar.location": "left",
 
   // Terminal
   "terminal.integrated.fontSize": 16,
@@ -60,6 +57,12 @@
   "files.associations": {
     "*.m": "matlab",
     "*.js": "javascriptreact"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
 
   // Vim
@@ -86,68 +89,5 @@
       "workbench.action.terminal.toggleTerminal",
       "workbench.action.toggleMaximizedPanel",
     ]
-  },
-
-  // Latex workshop
-  "latex-workshop.view.pdf.viewer": "tab",
-  "latex-workshop.latex.recipes": [
-    {
-      "name": "build",
-      "tools": ["wait", "clean", "build", "wait"]
-    },
-    {
-      "name": "clean",
-      "tools": ["clean"]
-    }
-  ],
-  "latex-workshop.latex.tools": [
-    {
-      "name": "clean",
-      "command": "rm",
-      "args": [
-        "-f",
-        "*.aux main.lo* *.maf main.mlf* main.mlt* main.mtc* *.soc *.out *.toc *.bbl *.blg *.glg *.glo *.gls *.ilg *.ist *.lof *.log *.lot *.nlo *.nls"
-      ]
-    },
-    {
-      "name": "wait",
-      "command": "sleep",
-      "args": ["5"]
-    },
-    {
-      "name": "build",
-      "command": "pdflatex",
-      "args": ["-synctex=1", "%DOC%.tex"]
-    }
-  ],
-
-  // GitLens
-  "gitlens.hovers.currentLine.over": "line",
-  "gitlens.hovers.enabled": false,
-  "gitlens.codeLens.enabled": false,
-  "gitlens.views.repositories.location": "scm",
-  "gitlens.views.fileHistory.location": "scm",
-  "gitlens.views.lineHistory.location": "scm",
-  "gitlens.views.search.location": "scm",
-  "gitlens.views.compare.location": "scm",
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "workbench.sideBar.location": "left",
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "aws.profile": "default",
-  "aws.samcli.location": "/home/joaoleite/.local/bin/sam",
-  "todo-tree.highlights.defaultHighlight": {
-    "icon": "alert",
-    "type": "text",
-    "foreground": "white",
-    "background": "blue",
-    "opacity": 60,
-    "iconColour": "white"
-  },
-  "explorer.confirmDelete": false
+  }
 }
