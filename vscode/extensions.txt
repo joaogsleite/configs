@@ -1,4 +1,3 @@
-be5invis.vscode-custom-css
 bierner.color-info
 clinyong.vscode-css-modules
 CoenraadS.bracket-pair-colorizer
