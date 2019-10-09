@@ -53,6 +53,7 @@
   // Languages
   "javascript.suggest.names": false,
   "javascript.updateImportsOnFileMove.enabled": "prompt",
+  "php.validate.enable": false,
   "typescript.disableAutomaticTypeAcquisition": true,
   "files.associations": {
     "*.m": "matlab",
@@ -89,5 +90,6 @@
       "workbench.action.terminal.toggleTerminal",
       "workbench.action.toggleMaximizedPanel",
     ]
-  }
+  },
+  "extensions.ignoreRecommendations": true
 }

@@ -48,7 +48,6 @@
 
     // Terminal
     // =============================
-    { "key": "ctrl+`",        "command": "macros.toggleTerminal",                       "when": "!terminalFocus" },
     { "key": "ctrl+shift+t",  "command": "" },
     { "key": "ctrl+shift+t",  "command": "workbench.action.toggleMaximizedPanel",       "when": "terminalFocus" },
     { "key": "ctrl+shift+[",  "command": "workbench.action.terminal.focusPrevious",     "when": "terminalFocus" },
@@ -65,12 +64,7 @@
     { "command": "workbench.action.debug.start",    "key": "ctrl+r",       "when": "!inDebugMode" },
     { "command": "workbench.action.debug.stop",     "key": "shift+ctrl+r", "when": "inDebugMode"  },    
 
-    // Project Manager
-    // =============================
-    { "command":"projectManager.listProjects", "key":"ctrl+alt+p" },
-
     // Global
     // =============================
-    { "key": "ctrl+shift+m", "command": "SQLTools/bookmarksExplorer.focus" },
-    { "key": "ctrl+w", "when": "!editorIsOpen" },
+    { "key": "ctrl+w", "when": "!editorIsOpen"}
 ]

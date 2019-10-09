@@ -2,10 +2,8 @@ bierner.color-info
 clinyong.vscode-css-modules
 CoenraadS.bracket-pair-colorizer
 dbaeumer.vscode-eslint
-felixfbecker.php-intellisense
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
-geddski.macros
 Gimly81.matlab
 IBM.output-colorizer
 konstantin.wrapSelection
