@@ -4,9 +4,7 @@ CoenraadS.bracket-pair-colorizer
 dbaeumer.vscode-eslint
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
-Gimly81.matlab
 IBM.output-colorizer
-konstantin.wrapSelection
 mikestead.dotenv
 ms-python.python
 ms-vscode.cpptools
