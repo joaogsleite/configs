@@ -67,6 +67,7 @@
   },
 
   // Vim
+  "vim.vimrc.enable": false,
   "vim.easymotion": true,
   "vim.sneak": true,
   "vim.incsearch": true,
@@ -91,5 +92,30 @@
       "workbench.action.toggleMaximizedPanel",
     ]
   },
-  "extensions.ignoreRecommendations": true
+  "extensions.ignoreRecommendations": true,
+  "yaml.schemas": {
+    "file:///home/joaoleite/.vscode/extensions/atlassian.atlascode-2.3.2/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "atlascode.jira.jqlList": [
+    {
+      "enabled": true,
+      "id": "e0098497-7fe6-4f8c-843d-3f0c7b5730ad",
+      "monitor": true,
+      "name": "My open issues",
+      "query": "assignee = currentUser() AND resolution = Unresolved order by updated DESC",
+      "siteId": "jira.b-i.com"
+    },
+    {
+      "enabled": true,
+      "id": "52517941-424b-4748-bf07-7c3a5fadb4c1",
+      "monitor": true,
+      "name": "All issues",
+      "query": "assignee = currentUser() order by updated DESC",
+      "siteId": "jira.b-i.com"
+    }
+  ],
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "files.autoSave": "off"
 }
