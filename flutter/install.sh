@@ -7,4 +7,8 @@ sudo tar -C /opt -xf *.tar.xz
 
 sudo chown -R $USER:$USER /opt/flutter
 
-/opt/flutter/bin/flutter doctor --android-licenses
+sudo cp ./flutter /usr/bin/flutter
+
+flutter doctor --android-licenses
+flutter precache
+
