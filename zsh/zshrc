@@ -13,6 +13,11 @@ source $ZSH/oh-my-zsh.sh
 export VISUAL="vim"
 export EDITOR="vim"
 
+# functions
+function weather { curl -4 "http://wttr.in/$1" }
+function yt { rm -f ~/.audio.m4a && youtube-dl -f 140 "gvsearch1:$*" -o ~/.audio.m4a > /dev/null 2>&1 && afplay ~/.audio.m4a }
+function tcpport { lsof -n -i4TCP:$1 }
+
 # ====================================
 # ALIAS
 # ====================================
@@ -45,30 +50,4 @@ alias ohmyzsh="$CONF_EDITOR ~/.oh-my-zsh"
 alias octaveconf="$CONF_EDITOR ~/.octaverc"
 alias hostsconf="sudo $CONF_EDITOR /etc/hosts"
 alias dockerconf="$CONF_EDITOR ~/.docker-machine"
-
-
-# ====================================
-# SPECIFIC SETTINGS FOR PACKAGES
-# ====================================
-
-# for docker machine
-source ~/.docker-machine
-
-# fonts for xquartz apps
-#export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
-#export LANGUAGE=en_US.UTF-8
-#export LANG=en_US.UTF-8
-#export LC_ALL=en_US.UTF-8
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-load_nvm() {
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-}
-npx() { unset -f npx  ; load_nvm ; npx  "$@" }
-nvm() { unset -f nvm  ; load_nvm ; nvm  "$@" }
-node(){ unset -f node ; load_nvm ; node "$@" }
-npm() { unset -f npm  ; load_nvm ; npm  "$@" }
-task() { npm run task -- $@ }
 
