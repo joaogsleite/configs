@@ -46,15 +46,3 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-load_nvm() {
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-}
-npx() { unset -f npx  ; load_nvm ; npx  "$@" }
-nvm() { unset -f nvm  ; load_nvm ; nvm  "$@" }
-node(){ unset -f node ; load_nvm ; node "$@" }
-npm() { unset -f npm  ; load_nvm ; npm  "$@" }
-task() { npm run task -- $@ }
-
