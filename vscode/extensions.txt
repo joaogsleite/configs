@@ -1,9 +1,7 @@
-atlassian.atlascode
 bierner.color-info
 clinyong.vscode-css-modules
 CoenraadS.bracket-pair-colorizer
 dbaeumer.vscode-eslint
-esbenp.prettier-vscode
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 IBM.output-colorizer
@@ -16,8 +14,6 @@ msjsdiag.debugger-for-chrome
 npxms.hide-gitignored
 nwallace.peep
 Prisma.vscode-graphql
-redhat.vscode-yaml
-robinbentley.sass-indented
 sandcastle.vscode-open
 vincaslt.highlight-matching-tag
 vscodevim.vim

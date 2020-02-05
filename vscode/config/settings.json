@@ -8,7 +8,7 @@
     "statusBar.background": "#383838",
     "statusBar.noFolderBackground": "#383838"
   },
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 2,
   "window.newWindowDimensions": "maximized",
   "window.menuBarVisibility": "toggle",
   "window.title": "${rootName}${separator}${activeEditorShort}",
@@ -35,6 +35,8 @@
   "editor.insertSpaces": true,
   "auto-close-tag.fullMode": false,
   "editor.suggestSelection": "first",
+  "editor.gotoLocation.multiple": "goto",
+
 
   // Explorer
   "explorer.autoReveal": false,
@@ -92,30 +94,5 @@
       "workbench.action.toggleMaximizedPanel",
     ]
   },
-  "extensions.ignoreRecommendations": true,
-  "yaml.schemas": {
-    "file:///home/joaoleite/.vscode/extensions/atlassian.atlascode-2.3.2/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
-  },
-  "atlascode.jira.jqlList": [
-    {
-      "enabled": true,
-      "id": "e0098497-7fe6-4f8c-843d-3f0c7b5730ad",
-      "monitor": true,
-      "name": "My open issues",
-      "query": "assignee = currentUser() AND resolution = Unresolved order by updated DESC",
-      "siteId": "jira.b-i.com"
-    },
-    {
-      "enabled": true,
-      "id": "52517941-424b-4748-bf07-7c3a5fadb4c1",
-      "monitor": true,
-      "name": "All issues",
-      "query": "assignee = currentUser() order by updated DESC",
-      "siteId": "jira.b-i.com"
-    }
-  ],
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "files.autoSave": "off"
+  "extensions.ignoreRecommendations": true
 }

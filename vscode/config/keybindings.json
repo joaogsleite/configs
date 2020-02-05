@@ -43,8 +43,8 @@
     { "key": "alt+ctrl+l",       "command": "editor.action.formatDocument",              "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly" },
     { "key": "ctrl+d",           "command": "editor.action.addSelectionToNextFindMatch", "when": "editorFocus" },
     { "key": "alt+c",            "command": "",                                          "when": "editorTextFocus && gitlens:enabled" },
-    //{ "key": "ctrl+shift+enter", "command": "editor.action.showHover",                   "when": "editorTextFocus" },
-    //{ "key": "ctrl+shift+.",       "command": "editor.action.revealDefinition",            "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" },
+    { "key": "ctrl+shift+enter", "command": "editor.action.showHover",                   "when": "editorTextFocus" },
+    { "key": "ctrl+enter",       "command": "editor.action.revealDefinition",            "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" },
 
     // Terminal
     // =============================
@@ -66,6 +66,5 @@
 
     // Global
     // =============================
-    { "key": "shift+ctrl+a", "command": "workbench.view.extension.atlascode-drawer" },
-    { "key": "ctrl+w", "when": "!editorIsOpen"},
+    { "key": "ctrl+w", "when": "!editorIsOpen"}
 ]
