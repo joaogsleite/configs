@@ -8,12 +8,14 @@
     "statusBar.background": "#383838",
     "statusBar.noFolderBackground": "#383838"
   },
+  "workbench.settings.editor": "json",
+  "workbench.editor.showTabs": true,
   "window.zoomLevel": 2,
   "window.newWindowDimensions": "maximized",
   "window.menuBarVisibility": "toggle",
   "window.title": "${rootName}${separator}${activeEditorShort}",
   "window.titleBarStyle": "native",
-  "workbench.settings.editor": "json",
+  "extensions.ignoreRecommendations": true,
 
   // Editor
   "editor.minimap.enabled": false,
@@ -22,8 +24,8 @@
   "editor.tabCompletion": "on",
   "editor.snippetSuggestions": "inline",
   "editor.acceptSuggestionOnEnter": "smart",
-  "editor.autoIndent": true,
-  "editor.find.autoFindInSelection": true,
+  "editor.autoIndent": "advanced",
+  "editor.find.autoFindInSelection": "multiline",
   "editor.quickSuggestions": {
     "other": false,
     "comments": false,
@@ -35,7 +37,8 @@
   "editor.insertSpaces": true,
   "auto-close-tag.fullMode": false,
   "editor.suggestSelection": "first",
-  "editor.gotoLocation.multiple": "goto",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleImplementations": "goto",
 
 
   // Explorer
@@ -86,13 +89,4 @@
   "python.linting.pylintArgs": ["--errors-only"],
   "matlab.mlintpath": "/Applications/MATLAB_R2017a.app/bin/maci64/mlint",
   "git.enableSmartCommit": true,
-
-  // macros
-  "macros": {
-    "toggleTerminal": [
-      "workbench.action.terminal.toggleTerminal",
-      "workbench.action.toggleMaximizedPanel",
-    ]
-  },
-  "extensions.ignoreRecommendations": true
 }
