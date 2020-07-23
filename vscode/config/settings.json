@@ -9,7 +9,6 @@
     "statusBar.noFolderBackground": "#383838"
   },
   "workbench.settings.editor": "json",
-  "workbench.editor.showTabs": true,
   "window.zoomLevel": 2,
   "window.newWindowDimensions": "maximized",
   "window.menuBarVisibility": "toggle",
@@ -44,6 +43,7 @@
   // Explorer
   "explorer.autoReveal": false,
   "explorer.openEditors.visible": 0,
+  "explorer.compactFolders": false,
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.quickOpen.closeOnFocusLost": true,
@@ -89,4 +89,5 @@
   "python.linting.pylintArgs": ["--errors-only"],
   "matlab.mlintpath": "/Applications/MATLAB_R2017a.app/bin/maci64/mlint",
   "git.enableSmartCommit": true,
+  "plantuml.server": "https://www.plantuml.com/plantuml",
 }

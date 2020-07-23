@@ -1,11 +1,16 @@
+42Crunch.vscode-openapi
+aaron-bond.better-comments
 bierner.color-info
+bierner.markdown-mermaid
 clinyong.vscode-css-modules
 CoenraadS.bracket-pair-colorizer
 dbaeumer.vscode-eslint
+eamodio.gitlens
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 IBM.output-colorizer
 jcbuisson.vue
+jebbs.plantuml
 mikestead.dotenv
 ms-python.python
 ms-vscode.cpptools
@@ -14,6 +19,10 @@ msjsdiag.debugger-for-chrome
 npxms.hide-gitignored
 nwallace.peep
 Prisma.vscode-graphql
+redhat.vscode-yaml
 sandcastle.vscode-open
+sleistner.vscode-fileutils
+ThreadHeap.serverless-ide-vscode
 vincaslt.highlight-matching-tag
+VisualStudioExptTeam.vscodeintellicode
 vscodevim.vim
