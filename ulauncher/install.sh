@@ -22,3 +22,6 @@ pip install pwgen
 
 # url shortner
 pip install requests
+
+# lorem ipsum
+pip3 install lorem --user
