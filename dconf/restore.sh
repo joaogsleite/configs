@@ -4,9 +4,9 @@
 # disable dynamic workspaces
 dconf write /org/gnome/mutter/dynamic-workspaces false
 # num workspaces=10
-dconf write /org/gnome/desktop/wm/preferences/num-workspaces 1
+#dconf write /org/gnome/desktop/wm/preferences/num-workspaces 1
 # workspace names
-dconf write /org/gnome/desktop/wm/preferences/workspace-names "['1']"
+#dconf write /org/gnome/desktop/wm/preferences/workspace-names "['1']"
 # move and switch workspaces
 #for INDEX in 1 2 3 4 5 6 7 8 9 10 .. N
 #do
@@ -26,11 +26,11 @@ dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/cus
 
 # UI
 # wallpaper
-dconf write /org/gnome/desktop/background/picture-options "'none'"
-dconf write /org/gnome/desktop/background/primary-color "'#000000'"
-dconf write /org/gnome/desktop/background/secondary-color "'#000000'"
+#dconf write /org/gnome/desktop/background/picture-options "'none'"
+#dconf write /org/gnome/desktop/background/primary-color "'#000000'"
+#dconf write /org/gnome/desktop/background/secondary-color "'#000000'"
 # show desktop icons
-dconf write /org/gnome/desktop/background/show-desktop-icons true
+#dconf write /org/gnome/desktop/background/show-desktop-icons true
 # theme
 dconf write /org/gnome/desktop/interface/gtk-theme "'Yaru-dark'"
 # date format on panel
@@ -53,5 +53,5 @@ dconf write /org/gnome/desktop/peripherals/touchpad/tap-to-click false
 # disable overview open with SUPER key
 dconf write /org/gnome/mutter/overlay-key "'Super_L'"
 # login user list
-dconf write /org/gnome/login-screen/disable-user-list true
+#dconf write /org/gnome/login-screen/disable-user-list true
 
