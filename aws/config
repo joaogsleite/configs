@@ -1,7 +1,0 @@
-[default]
-region = eu-west-1
-
-[profile malaria]
-output = json
-region = eu-west-2
-source_profile = malaria

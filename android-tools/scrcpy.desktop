@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=scrcpy
+Comment=Remote control android device
+Exec=scrcpy
+Icon=/usr/share/applications/scrcpy.png
+Terminal=false

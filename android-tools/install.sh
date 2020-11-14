@@ -8,3 +8,4 @@ sudo apt install -y android-file-transfer
 # android-tools
 sudo apt install -y android-tools-adb
 sudo apt install -y android-tools-fastboot
+sudo apt install -y scrcpy
