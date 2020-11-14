@@ -44,7 +44,7 @@ dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-up "['<Shift><Al
 dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-down "['<Alt><Super>Down']"
 dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-up "['<Alt><Super>Up']"
 # change input language keyboard
-dconf write /org/gnome/desktop/wm/keybindings/switch-input-source ['<Super>space', 'XF86Keyboard']
+dconf write /org/gnome/desktop/wm/keybindings/switch-input-source "['<Super>space', 'XF86Keyboard']"
 
 
 # UI
