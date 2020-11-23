@@ -27,8 +27,8 @@ dconf write /org/gnome/shell/extensions/dash-to-panel/hot-keys "true"
 dconf write /org/gnome/shell/extensions/dash-to-panel/hotkeys-overlay-combo "'ALWAYS'"
 dconf write /org/gnome/shell/extensions/dash-to-panel/isolate-workspaces "true"
 dconf write /org/gnome/shell/extensions/dash-to-panel/multi-monitors "false"
-dconf write /org/gnome/shell/extensions/dash-to-panel/panel-element-positions "'{"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}]}'"
-dconf write /org/gnome/shell/extensions/dash-to-panel/panel-positions "'{"0":"LEFT"}'"
+dconf write /org/gnome/shell/extensions/dash-to-panel/panel-element-positions "'{\"0\":[{\"element\":\"showAppsButton\",\"visible\":false,\"position\":\"stackedTL\"},{\"element\":\"activitiesButton\",\"visible\":false,\"position\":\"stackedTL\"},{\"element\":\"leftBox\",\"visible\":true,\"position\":\"stackedTL\"},{\"element\":\"taskbar\",\"visible\":true,\"position\":\"stackedTL\"},{\"element\":\"centerBox\",\"visible\":true,\"position\":\"stackedBR\"},{\"element\":\"rightBox\",\"visible\":true,\"position\":\"stackedBR\"},{\"element\":\"dateMenu\",\"visible\":true,\"position\":\"stackedBR\"},{\"element\":\"systemMenu\",\"visible\":true,\"position\":\"stackedBR\"},{\"element\":\"desktopButton\",\"visible\":false,\"position\":\"stackedBR\"}]}'"
+dconf write /org/gnome/shell/extensions/dash-to-panel/panel-positions "'{\"0\":\"LEFT\"}'"
 dconf write /org/gnome/shell/extensions/dash-to-panel/scroll-icon-action "'NOTHING'"
 dconf write /org/gnome/shell/extensions/dash-to-panel/scroll-panel-action "'NOTHING'"
 dconf write /org/gnome/shell/extensions/dash-to-panel/shortcut-previews "false"
@@ -44,3 +44,6 @@ dconf write /org/gnome/shell/extensions/dash-to-panel/stockgs-panelbtn-click-onl
 dconf write /org/gnome/shell/extensions/dash-to-panel/trans-panel-opacity "0.0"
 dconf write /org/gnome/shell/extensions/dash-to-panel/trans-use-custom-bg "false"
 dconf write /org/gnome/shell/extensions/dash-to-panel/trans-use-custom-opacity "true"
+
+# nothing to say
+dconf write /org/gnome/shell/extensions/nothing-to-say/keybinding-toggle-mute '["F4"]'
