@@ -15,3 +15,12 @@ sudo apt-get install qemu-kvm
 # desktop file
 cp ./androidstudio.desktop ~/.local/share/applications/androidstudio.desktop
 
+# fix avdmanager
+sudo apt-get autoremove openjdk*
+sudo apt-get install openjdk-8-jdk
+
+# fix permissions
+sudo chown -R $USER:$USER /opt/android-studio
+
+
+
