@@ -25,3 +25,6 @@ pip install requests
 
 # lorem ipsum
 pip3 install lorem --user
+
+# clipboard
+sudo apt install -y gpaste
