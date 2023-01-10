@@ -1,0 +1,8 @@
+Host *
+  StrictHostKeyChecking no
+  UserKnownHostsFile=/dev/null
+  IgnoreUnknown UseKeychain
+  UseKeychain yes
+  ServerAliveInterval 20
+  ServerAliveCountMax 180
+  User root

@@ -1,0 +1,6 @@
+.vscode/
+
+# private
+ssh/ssh/
+filezilla/sitemanager.xml.gpg
+dbeaver/config.zip*
