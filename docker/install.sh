@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ "$(uname)" == "Darwin" ]; then
-  brew install docker
+  brew install --cask docker
   brew install docker-compose
 else
   sudo apt install -y docker.io

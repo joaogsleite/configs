@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ "$(uname)" == "Darwin" ]; then
-  brew install --cask sonobus
+  mas lucky microsoft-todo
 else
-  sudo snap install sonobus
+  echo "no alternative for Linux"
 fi
