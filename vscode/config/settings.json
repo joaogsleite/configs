@@ -12,6 +12,7 @@
   "window.titleBarStyle": "custom",
   "window.title": "${rootName}${separator}${activeEditorShort}",
   "editor.accessibilitySupport": "off",
+  "window.nativeTabs": false,
 
   // Editor
   "editor.minimap.enabled": false,
@@ -113,6 +114,11 @@
     "yaml": false,
     "plaintext": true,
     "markdown": false
+  },
+  "extensions.ignoreRecommendations": true,
+  "gitlens.plusFeatures.enabled": false,
+  "[python]": {
+    "editor.formatOnType": true
   },
   "window.zoomLevel": 1,
 }
