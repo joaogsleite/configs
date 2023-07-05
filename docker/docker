@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [ $1 == "compose" ]; then
+  docker-compose ${@:2}
+else
+  podman $@
+fi
+

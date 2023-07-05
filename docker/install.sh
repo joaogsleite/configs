@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ "$(uname)" == "Darwin" ]; then
-  brew install --cask docker
+  brew install --cask podman-desktop
   brew install docker-compose
 else
   sudo apt install -y docker.io
