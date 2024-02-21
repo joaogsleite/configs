@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ "$(uname)" == "Darwin" ]; then
-  brew install --cask macpass
+  brew install --cask iina
 else
-  echo "use Keeweb on Linux"
+  echo "use VLC on Linux"
 fi

@@ -17,10 +17,10 @@ sudo apt install -y ifuse
 sudo apt install -y xorriso
 
 # creating deb file
-unzip DaVinci_Resolve_*.zip
-tar zxvf makeresolvedeb_*.sh.tar.gz
-./makeresolvedeb_*.sh lite
+unzip ~/Downloads/DaVinci_Resolve_*.zip
+tar zxvf ~/Downloads/makeresolvedeb_*.sh.tar.gz
+~/Downloads/makeresolvedeb_*.sh lite
 
 # installing davinci-resolve
-sudo dpkg -i davinci-resolve_*.deb
+sudo dpkg -i ~/Downloads/davinci-resolve_*.deb
 

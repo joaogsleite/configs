@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
+#ffmpeg -i input.mov -c:v prores -profile:v 3  -c:a pcm_s16le output.mov
+
 ffmpeg -i $1 -vcodec dnxhd -acodec pcm_s16le -s 1920x1080 -r 30000/1001 -b:v 36M -pix_fmt yuv422p -f mov $2.mov
