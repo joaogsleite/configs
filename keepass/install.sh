@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ "$(uname)" == "Darwin" ]; then
-  echo "Install Keepassium from App Store"
+  brew install --cask macpass
 else
   read -p "Did you download the .deb file from https://keeweb.info (y/N) " yn
   case $yn in
