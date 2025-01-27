@@ -19,10 +19,10 @@ export EDITOR="vim"
 # Functions and alias
 # ====================================
 if [[ "$(uname)" == "Darwin" ]]; then
+else
   alias pbcopy="xclip -selection clipboard"
   alias pbpaste="xclip -o"
   alias openup="xdg-open"
-else
   alias vino="/usr/lib/vino/vino-server"
 fi
 function tcpport { lsof -n -i4TCP:$1 }
@@ -32,7 +32,6 @@ alias ldot='ls -d .*'
 alias r="source ~/.zshrc"
 alias q="exit"
 alias size="du -sh "
-alias npm="pnpm"
 
 # ==============================
 # SPECIFIC SETTINGS FOR PACKAGES
