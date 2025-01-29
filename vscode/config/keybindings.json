@@ -3,6 +3,10 @@
   // File actions
   // =============================
   {
+    "key": "cmd+shift+e",
+    "command": "workbench.files.action.focusFilesExplorer",
+  },
+  {
     "key": "shift+a",
     "command": "explorer.newFolder",
     "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
