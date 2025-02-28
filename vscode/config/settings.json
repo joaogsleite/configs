@@ -13,7 +13,6 @@
   "window.title": "${rootName}${separator}${activeEditorShort}",
   "window.nativeTabs": false,
   "window.autoDetectColorScheme": true,
-  "workbench.colorTheme": "Default Dark Modern",
   "workbench.preferredLightColorTheme": "Default Light Modern",
   "workbench.preferredDarkColorTheme": "Default Dark Modern",
 
@@ -125,5 +124,6 @@
   "git.confirmSync": false,
   "codeium.enableConfig": {
     "*": true
-  }
+  },
+  "codeium.enableCodeLens": false
 }
