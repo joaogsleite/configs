@@ -3,5 +3,5 @@
 if [ "$(uname)" == "Darwin" ]; then
   brew install --cask brave-browser
 else
-  # todo
+  echo "todo on linux"
 fi
