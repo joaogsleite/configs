@@ -125,5 +125,6 @@
   "codeium.enableConfig": {
     "*": true
   },
-  "codeium.enableCodeLens": false
+  "codeium.enableCodeLens": false,
+  "chat.commandCenter.enabled": false
 }

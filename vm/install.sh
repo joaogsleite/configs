@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
-brew install --cask utm
-
+if [ "$(uname)" == "Darwin" ]; then
+  brew install --cask utm
+else
+  echo "Use Virtual Box on Linux"
+fi
