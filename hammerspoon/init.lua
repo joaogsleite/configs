@@ -1,12 +1,18 @@
-local ws = hs.websocket.new("ws://127.0.0.1:58174",
-  function(websocket, message, opCode)
-    if message then
-      print("Received from server:", message)
-    else
-      print("Disconnected from server")
+local ws
+function wsConnect()
+  print("Connecting to websocket...")
+  ws = hs.websocket.new("ws://127.0.0.1:58174",
+    function(status)
+      if status == "open" then
+        print("Connected to websocket.")
+      else
+        hs.timer.doAfter(3, wsConnect)
+      end
     end
-  end
-)
+  )
+end
+wsConnect()
+
 function wsSend(obj)
   ws:send(hs.json.encode(obj))
 end
