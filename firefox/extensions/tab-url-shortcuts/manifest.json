@@ -1,0 +1,48 @@
+{
+  "manifest_version": 2,
+  "name": "Tab URL Shortcuts",
+  "version": "1.0",
+  "permissions": ["tabs"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "commands": {
+    "focus-teams": {
+      "suggested_key": {
+        "default": "MacCtrl+Alt+F1"
+      },
+      "description": "Focus Microsoft Teams"
+    },
+    "focus-whatsapp": {
+      "suggested_key": {
+        "default": "MacCtrl+Alt+F2"
+      },
+      "description": "Focus WhatsApp"
+    },
+    "focus-discord": {
+      "suggested_key": {
+        "default": "MacCtrl+Alt+F3"
+      },
+      "description": "Focus Discord"
+    },
+    "focus-gmail": {
+      "suggested_key": {
+        "default": "MacCtrl+Alt+F4"
+      },
+      "description": "Focus Gmail"
+    },
+    "focus-chatgpt": {
+      "suggested_key": {
+        "default": "MacCtrl+Alt+F5"
+      },
+      "description": "Focus ChatGPT"
+    },
+    "focus-jira": {
+      "suggested_key": {
+        "default": "MacCtrl+Alt+F6"
+      },
+      "description": "Focus Jira"
+    }
+  }
+}
