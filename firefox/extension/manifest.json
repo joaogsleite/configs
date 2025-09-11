@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "name": "joaogsleite-extension",
+  "version": "1.0.8",
+  "permissions": ["tabs", "scripting"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  }
+}

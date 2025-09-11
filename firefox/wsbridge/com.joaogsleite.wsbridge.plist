@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" 
+ "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>com.joaogsleite.wsbridge</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/Users/joaoleite/Developer/configs/firefox/wsbridge/index.js</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/Users/joaoleite/Developer/configs/firefox/wsbridge/out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/joaoleite/Developer/configs/firefox/wsbridge/err.log</string>
+  </dict>
+</plist>

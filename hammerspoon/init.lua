@@ -1,3 +1,16 @@
+local ws = hs.websocket.new("ws://127.0.0.1:58174",
+  function(websocket, message, opCode)
+    if message then
+      print("Received from server:", message)
+    else
+      print("Disconnected from server")
+    end
+  end
+)
+function wsSend(obj)
+  ws:send(hs.json.encode(obj))
+end
+
 function string_split(str, sep)
   local result = {}
   for part in string.gmatch(str, "[^" .. sep .. "]+") do
@@ -30,7 +43,6 @@ function onshortcut(shortcut, cb, app)
   table.insert(keys, lastKeyCode)
   local shortcutWithCode = table.concat(keys, "+")
   shortcutBindings[shortcutWithCode] = { cb = cb, app = app }
-  print(hs.inspect(shortcutBindings))
 end
 
 -- Single eventtap
@@ -40,7 +52,6 @@ end
 myKeyInterceptor = hs.eventtap.new(
   {hs.eventtap.event.types.flagsChanged, hs.eventtap.event.types.keyDown, hs.eventtap.event.types.keyUp},
   function(event)
-    print(hs.inspect(event))
     local kc = event:getKeyCode()
     local et = event:getType()
     local flags = event:getFlags()
@@ -129,27 +140,27 @@ onshortcut("rcmd+z", function()
 end)
 onshortcut("rcmd+t", function() 
   openApp("Firefox")
-  keyStroke({"ctrl", "alt"}, "F1")
+  wsSend({ action = "focusTab", url = "teams.microsoft.com" })
 end)
 onshortcut("rcmd+w", function() 
   openApp("Firefox")
-  keyStroke({"ctrl", "alt"}, "F2")
+  wsSend({ action = "focusTab", url = "web.whatsapp.com" })
 end)
 onshortcut("rcmd+d", function() 
   openApp("Firefox")
-  keyStroke({"ctrl", "alt"}, "F3")
+  wsSend({ action = "focusTab", url = "discord.com" })
 end)
 onshortcut("rcmd+g", function() 
   openApp("Firefox")
-  keyStroke({"ctrl", "alt"}, "F4")
+  wsSend({ action = "focusTab", url = "mail.google.com" })
 end)
 onshortcut("rcmd+i", function() 
   openApp("Firefox")
-  keyStroke({"ctrl", "alt"}, "F5")
+  wsSend({ action = "focusTab", url = "chatgpt.com" })
 end)
 onshortcut("rcmd+j", function()
   openApp("Firefox")
-  keyStroke({"ctrl", "alt"}, "F6")
+  wsSend({ action = "focusTab", url = "atlassian.net/jira" })
 end)
 onshortcut("alt+cmd+up", function() 
   keyStroke({"ctrl", "alt"}, "up")
