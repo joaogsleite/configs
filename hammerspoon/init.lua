@@ -28,8 +28,10 @@ function frontmostApp()
   return frontApp:name()
 end
 
-function keyStroke(flags, key)
-  hs.eventtap.keyStroke(flags, key)
+function keyStroke(mods, key)
+  local keyCode = hs.keycodes.map[key]
+  hs.eventtap.event.newKeyEvent(mods, keyCode, true):post()  -- key down
+  hs.eventtap.event.newKeyEvent(mods, keyCode, false):post() -- key up
 end
 
 local flagsDown = {}
@@ -162,10 +164,10 @@ onshortcut("rcmd+j", function()
   openApp("Firefox")
   wsSend({ action = "focusTab", url = "atlassian.net/jira" })
 end)
-onshortcut("alt+cmd+up", function() 
+onshortcut("alt+cmd+up", function()
   keyStroke({"ctrl", "alt"}, "up")
-end,"Firefox")
-onshortcut("alt+cmd+down", function() 
+end, "Firefox")
+onshortcut("alt+cmd+down", function()
   keyStroke({"ctrl", "alt"}, "down")
 end, "Firefox")
 onshortcut("alt+cmd+left", function()
