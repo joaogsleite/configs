@@ -1,20 +1,39 @@
-local ws
-function wsConnect()
-  print("Connecting to websocket...")
-  ws = hs.websocket.new("ws://127.0.0.1:58174",
-    function(status)
-      if status == "open" then
-        print("Connected to websocket.")
-      else
+
+_G.wsRetry = 0
+local function wsConnect()
+  local wsRetry = _G.wsRetry
+  local wsUrl = "ws://127.0.0.1:58174?name=hammerspoon"
+  _G.wsSocket = hs.websocket.new(wsUrl, function(status, msg)
+    if status == "open" then
+      print("Connected to websocket.")
+    elseif status == "closed" then
+      print("Disconnected from websocket.")
+      if (_G.wsRetry < wsRetry+1) then
+        _G.wsRetry = wsRetry+1
         hs.timer.doAfter(3, wsConnect)
       end
+    elseif status == "fail" then
+      print("Failed to connect to websocket.")
+      if (_G.wsRetry < wsRetry+1) then
+        _G.wsRetry = wsRetry+1
+        hs.timer.doAfter(3, wsConnect)
+      end
+    elseif status == "received" then
+      wsMsgReceived(hs.json.decode(msg))
     end
-  )
+  end)
 end
 wsConnect()
 
+function wsMsgReceived(obj)
+  print("Received from websocket:")
+  print(hs.inspect(obj))
+end
+
 function wsSend(obj)
-  ws:send(hs.json.encode(obj))
+  print("Sending to websocket:")
+  print(hs.inspect(obj))
+  _G.wsSocket:send(hs.json.encode(obj))
 end
 
 function string_split(str, sep)
@@ -161,31 +180,31 @@ onshortcut("rcmd+z", function()
 end)
 onshortcut("rcmd+h", function() 
   openApp("Firefox")
-  wsSend({ action = "focusTab", url = "03.xyz" })
+  wsSend({ command = "focusTab", url = "03.xyz" })
 end)
 onshortcut("rcmd+t", function() 
   openApp("Firefox")
-  wsSend({ action = "focusTab", url = "teams.microsoft.com" })
+  wsSend({ command = "focusTab", url = "teams.microsoft.com" })
 end)
 onshortcut("rcmd+w", function()
   openApp("Firefox")
-  wsSend({ action = "focusTab", url = "web.whatsapp.com" })
+  wsSend({ command = "focusTab", url = "web.whatsapp.com" })
 end)
 onshortcut("rcmd+d", function() 
   openApp("Firefox")
-  wsSend({ action = "focusTab", url = "discord.com" })
+  wsSend({ command = "focusTab", url = "discord.com" })
 end)
 onshortcut("rcmd+g", function() 
   openApp("Firefox")
-  wsSend({ action = "focusTab", url = "mail.google.com" })
+  wsSend({ command = "focusTab", url = "mail.google.com" })
 end)
 onshortcut("rcmd+i", function() 
   openApp("Firefox")
-  wsSend({ action = "focusTab", url = "chatgpt.com" })
+  wsSend({ command = "focusTab", url = "chatgpt.com" })
 end)
 onshortcut("rcmd+j", function()
   openApp("Firefox")
-  wsSend({ action = "focusTab", url = "atlassian.net/jira" })
+  wsSend({ command = "focusTab", url = "atlassian.net/jira" })
 end)
 onshortcut("cmd+/", function()
   keyStroke({"shift", "ctrl"}, "f16")

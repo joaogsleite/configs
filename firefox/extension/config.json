@@ -1,0 +1,23 @@
+{
+  "containerRules": {
+    "Personal": [
+      "web.whatsapp.com",
+      "03.xyz",
+      "discord.com",
+      "olx.pt",
+      "github.com"
+    ],
+    "Halibiuns": [
+      "youtube.com"
+    ],
+    "Merkle": [
+      "teams.microsoft.com",
+      "outlook.office.com",
+      "okta-emea.com"
+    ],
+    "Arrow": [
+      "arrowecommerce.atlassian.net",
+      "bitbucket.org/arrowecommerce"
+    ]
+  }
+}
