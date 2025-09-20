@@ -1,0 +1,3 @@
+config/id_*
+config/*.pub
+config/authorized_keys

@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# params
+FOLDER=/tmp/mychromeinstance
+URL="http://localhost:3000"
+
+# remove previous created profiles
+rm -rf $FOLDER || true
+
+# open new chrome instance
+if [ "$(uname)" == "Darwin" ]; then
+  EXECUTABLE="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+else
+  EXECUTABLE=google-chrome
+fi
+"$EXECUTABLE" \
+  --no-default-browser-check \
+  --no-first-run \
+  --disable-default-apps \
+  --disable-popup-blocking \
+  --disable-translate \
+  --user-data-dir=$FOLDER \
+  $URL

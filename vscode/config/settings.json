@@ -1,0 +1,131 @@
+{
+  // Behaviour
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.revealIfOpen": true,
+  "workbench.settings.editor": "json",
+  "window.newWindowDimensions": "maximized",
+  "window.zoomLevel": 1,
+  "workbench.activityBar.location": "hidden",
+  "extensions.ignoreRecommendations": true,
+
+  // Appearance
+  "window.titleBarStyle": "custom",
+  "window.title": "${rootName}${separator}${activeEditorShort}",
+  "window.nativeTabs": false,
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredLightColorTheme": "Default Light Modern",
+  "workbench.preferredDarkColorTheme": "Default Dark Modern",
+
+  // Editor
+  "editor.minimap.enabled": false,
+  "editor.fontSize": 13,
+  "editor.tabCompletion": "on",
+  "editor.snippetSuggestions": "inline",
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.autoIndent": "advanced",
+  "editor.find.autoFindInSelection": "multiline",
+  "editor.accessibilitySupport": "off",
+  "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false
+  },
+  "editor.quickSuggestionsDelay": 999999999,
+  "editor.tabSize": 2,
+  "editor.rulers": [90],
+  "editor.insertSpaces": true,
+  "editor.suggestSelection": "first",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.inlineSuggest.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  // Explorer
+  "workbench.list.openMode": "doubleClick",
+  "explorer.autoReveal": false,
+  "explorer.openEditors.visible": 0,
+  "explorer.compactFolders": false,
+  "workbench.editor.enablePreview": false,
+  "workbench.tree.indent": 15,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.quickOpen.closeOnFocusLost": true,
+  "workbench.sideBar.location": "left",
+  "security.workspace.trust.untrustedFiles": "open",
+
+  // Terminal
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.letterSpacing": -1,
+  "terminal.integrated.lineHeight": 1.5,
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  "terminal.integrated.allowedLinkSchemes": [
+    "file",
+    "http",
+    "https",
+    "vscode",
+  ],
+
+  // Languages
+  "javascript.suggest.names": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "php.validate.enable": false,
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "files.associations": {
+    "*.m": "matlab",
+    "*.js": "javascriptreact",
+    "*.yaml": "esphome"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }, 
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+
+  // Vim
+  "vim.vimrc.enable": false,
+  "vim.easymotion": true,
+  "vim.sneak": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": false,
+  "vim.useCtrlKeys": false,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [{ "before": ["j", "k"], "after": ["<Esc>"] }],
+  "vim.leader": "<space>",
+
+  // Plugins
+  "npm.packageManager": "pnpm",
+  "redhat.telemetry.enabled": false,
+  "git.confirmSync": false,
+  "codeium.enableConfig": {
+    "*": true
+  },
+  "codeium.enableCodeLens": false,
+  "chat.commandCenter.enabled": false,
+}

@@ -1,0 +1,29 @@
+[user]
+	name = João Leite
+	email = Joao.Leite@merkle.com
+[push]
+	default = simple
+[core]
+	editor = code -n -w
+	excludesfile = ~/.gitignore
+[color]
+  ui = true
+[alias]
+  a = add
+  c = commit -m
+  ca = commit -am
+  s = status -su
+  ck = checkout
+  fl = log -u
+  b = branch
+  diff = diff --color-words
+  pl = pull
+  ps = push
+  spull   = "! __git_spull() { git pull \"$@\" && git submodule sync --recursive && git submodule update --init --recursive; }; __git_spull"
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit
+	ignore = update-index --assume-unchanged
+	noignore = update-index --no-assume-unchanged
+[log]
+	date = iso
+[pull]
+	rebase = false

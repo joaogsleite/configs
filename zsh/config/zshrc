@@ -1,0 +1,52 @@
+## ====================================
+# Oh-my-zsh settings
+# ====================================
+ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="jnrowe"
+ZSH_DISABLE_COMPFIX=true
+DEFAULT_USER=`whoami`
+plugins=(extract vi-mode)
+source $ZSH/oh-my-zsh.sh
+PROMPT='${ret_status}%{$fg[blue]%}${PROMPT_HOST}%{$fg_bold[green]%} %{$fg_bold[yellow]%}%2~ ${vcs_info_msg_0_}${dir_status}%{$reset_color%} '
+
+# ====================================
+# Default text editor
+# ====================================
+export VISUAL="vim"
+export EDITOR="vim"
+
+# ====================================
+# Functions and alias
+# ====================================
+if [[ "$(uname)" == "Darwin" ]]; then
+else
+  alias pbcopy="xclip -selection clipboard"
+  alias pbpaste="xclip -o"
+  alias openup="xdg-open"
+  alias vino="/usr/lib/vino/vino-server"
+fi
+function tcpport { lsof -n -i4TCP:$1 }
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias flushdns="sudo killall -HUP mDNSResponder"
+alias ldot='ls -d .*'
+alias r="source ~/.zshrc"
+alias q="exit"
+alias size="du -sh "
+
+# ==============================
+# SPECIFIC SETTINGS FOR PACKAGES
+# ==============================
+
+# pnpm
+export PNPM_HOME="/Users/joaoleite/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# fzf-tab-completion
+source ~/Developer/configs/fzf-tab-completion/fzf-tab-completion/zsh/fzf-zsh-completion.sh
+bindkey '^I' fzf_completion # bind TAB to autocomplete dialog
+source <(pnpm completion zsh) # completion for npm commands
+
