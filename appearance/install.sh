@@ -9,6 +9,7 @@ if [[ $(uname) == "Darwin" ]]; then
   defaults write com.apple.dock wvous-br-modifier -int 0 # disable right corner
   defaults write com.apple.menuextra.clock ShowSeconds -bool true # clock with seconds
   defaults write com.apple.menuextra.clock ShowDate -int 2 # clock without date
+  defaults write com.apple.menuextra.clock ShowDayOfWeek -int 0 # hide weekday
+  killall ControlCenter
   killall Dock
-  killall SystemUIServer
 fi

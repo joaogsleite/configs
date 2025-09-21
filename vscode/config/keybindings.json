@@ -4,7 +4,7 @@
   // =============================
   {
     "key": "cmd+shift+e",
-    "command": "workbench.files.action.focusFilesExplorer",
+    "command": "workbench.files.action.focusFilesExplorer"
   },
   {
     "key": "shift+a",
@@ -197,6 +197,9 @@
     "command": "editor.action.revealDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
+
+  // Terminal
+  // =============================
   {
     "key": "cmd+shift+t",
     "command": "workbench.action.toggleMaximizedPanel",
@@ -271,7 +274,7 @@
   // =============================
   {
     "key": "f5",
-    "command": "",
+    "command": ""
   },
   // Global
   // =============================
@@ -284,5 +287,9 @@
     "key": "cmd+w",
     "command": "",
     "when": "!editorIsOpen"
+  },
+  {
+    "key": "cmd+shift+c",
+    "command": "workbench.panel.chat"
   }
 ]
