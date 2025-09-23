@@ -102,7 +102,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open -a 'Microsoft Teams'"
+                    "shell_command": "/Users/joaoleite/Developer/configs/hammerspoon/run.sh focusTeams"
                   }
                 ],
                 "conditions": [
@@ -318,7 +318,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open -a 'Discord'"
+                    "shell_command": "/Users/joaoleite/Developer/configs/hammerspoon/run.sh focusDiscord"
                   }
                 ],
                 "conditions": [

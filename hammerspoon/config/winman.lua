@@ -21,7 +21,6 @@ local function getSafariProfileWindow(profileName)
       return win
     end
   end
-  print('end')
 end
 local function focusWindow(win)
   win:unminimize()
@@ -69,15 +68,37 @@ _G.focusSafariTab = function(tabUrl)
   focusWindow(win)
 end
 
-_G.focusMeeting = function()
+_G.focusMeeting = function()  
+  local focused = _G.focusTeams(true)
+  if not focused then
+    focused = _G.focusDiscord(true)
+  end
+end
+
+_G.focusDiscord = function(meeting)
+  meeting = meeting or false
+  local appWindows = getWindowsFromApp("Discord")
+  for _, win in ipairs(appWindows) do
+    if meeting ~= helpers.endsWith(win:title(), "- Discord") then
+      focusWindow(win)
+      return win
+    end
+  end
+  return false
+end
+
+
+_G.focusTeams = function(meeting)
+  meeting = meeting or false
   local teamsViews = {"Activity", "Chat", "Calendar", "Calls", "OneDrive", "Copilot", "Workday",  "Apps", "Meeting compact view"}
   local appWindows = getWindowsFromApp("Microsoft Teams")
   for _, win in ipairs(appWindows) do
-    if not helpers.startsWithAny(win:title(), teamsViews) then
+    if meeting ~= helpers.startsWithAny(win:title(), teamsViews) then
       focusWindow(win)
-      return
+      return win
     end
   end
+  return false
 end
 
 _G.focusAppWindow = function(appName, windowTitle)
