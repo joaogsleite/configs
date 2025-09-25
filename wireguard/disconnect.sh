@@ -1,2 +1,5 @@
 #!/usr/bin/env bash
-sudo wg-quick down wg0
+
+CONFIG_NAME="${1%.conf}"
+
+sudo wg-quick down $CONFIG_NAME

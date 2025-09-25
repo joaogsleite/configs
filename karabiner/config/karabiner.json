@@ -7,10 +7,9 @@
       "complex_modifications": {
         "rules": [
           {
-            "description": "Capslock as Leader key",
+            "description": "Right command as Leader key",
             "manipulators": [
               {
-                "type": "basic",
                 "from": {
                   "key_code": "caps_lock",
                   "modifiers": {
@@ -34,7 +33,8 @@
                       "value": 0
                     }
                   }
-                ]
+                ],
+                "type": "basic"
               }
             ]
           },
@@ -42,7 +42,185 @@
             "description": "Leader key shortcuts",
             "manipulators": [
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "right_arrow",
+                  "modifiers": {
+                    "optional": []
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/Users/joaoleite/Developer/configs/hammerspoon/run.sh focusWindowInDirection right"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "up_arrow",
+                  "modifiers": {
+                    "optional": []
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/Users/joaoleite/Developer/configs/hammerspoon/run.sh moveWindow maximized"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "down_arrow",
+                  "modifiers": {
+                    "optional": []
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/Users/joaoleite/Developer/configs/hammerspoon/run.sh focusWindowInDirection down"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "left_arrow",
+                  "modifiers": {
+                    "optional": []
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/Users/joaoleite/Developer/configs/hammerspoon/run.sh focusWindowInDirection left"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "right_arrow",
+                  "modifiers": {
+                    "mandatory": ["left_command"],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/Users/joaoleite/Developer/configs/hammerspoon/run.sh moveWindow right50"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "left_arrow",
+                  "modifiers": {
+                    "mandatory": ["left_command"],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/Users/joaoleite/Developer/configs/hammerspoon/run.sh moveWindow left50"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "down_arrow",
+                  "modifiers": {
+                    "mandatory": ["left_command"],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/Users/joaoleite/Developer/configs/hammerspoon/run.sh moveWindowToNextScreen"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "up_arrow",
+                  "modifiers": {
+                    "mandatory": ["left_command"],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/Users/joaoleite/Developer/configs/hammerspoon/run.sh moveWindowToNextScreen"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "i"
                 },
@@ -51,16 +229,16 @@
                     "shell_command": "open -a 'ChatGPT'"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "b"
                 },
@@ -69,16 +247,16 @@
                     "shell_command": "/Users/joaoleite/Developer/configs/hammerspoon/run.sh focusSafariProfile Personal"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "x"
                 },
@@ -87,16 +265,16 @@
                     "shell_command": "/Users/joaoleite/Developer/configs/hammerspoon/run.sh focusMeeting"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "t"
                 },
@@ -105,16 +283,16 @@
                     "shell_command": "/Users/joaoleite/Developer/configs/hammerspoon/run.sh focusTeams"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "f"
                 },
@@ -123,16 +301,16 @@
                     "shell_command": "open -a 'Finder'"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "o"
                 },
@@ -141,16 +319,16 @@
                     "shell_command": "open -a 'OrbStack'"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "v"
                 },
@@ -159,16 +337,16 @@
                     "shell_command": "open -a 'Visual Studio Code'"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "k"
                 },
@@ -177,16 +355,16 @@
                     "shell_command": "open -a 'MacPass'"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "r"
                 },
@@ -195,16 +373,16 @@
                     "shell_command": "open -a 'Reminders'"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "w"
                 },
@@ -213,16 +391,16 @@
                     "shell_command": "open -a 'WhatsApp'"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "0"
                 },
@@ -231,16 +409,16 @@
                     "shell_command": "open -a 'Microsoft Outlook'"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "z"
                 },
@@ -249,34 +427,34 @@
                     "shell_command": "open -a 'Terminal'"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "c"
                 },
                 "to": [
                   {
-                    "shell_command": "open -a 'Google Chrome'"
+                    "shell_command": "/Users/joaoleite/Developer/configs/hammerspoon/run.sh focusApp \"Google Chrome\""
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "n"
                 },
@@ -285,16 +463,16 @@
                     "shell_command": "open -a 'Notes'"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "l"
                 },
@@ -303,16 +481,16 @@
                     "shell_command": "open -a 'Blender'"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "d"
                 },
@@ -321,16 +499,16 @@
                     "shell_command": "/Users/joaoleite/Developer/configs/hammerspoon/run.sh focusDiscord"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "y"
                 },
@@ -339,16 +517,16 @@
                     "shell_command": "/Users/joaoleite/Developer/configs/hammerspoon/run.sh focusSafariTab youtube.com"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "g"
                 },
@@ -357,16 +535,16 @@
                     "shell_command": "open -a 'Gmail'"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "backslash"
                 },
@@ -378,16 +556,16 @@
                     "shell_command": "/Users/joaoleite/Developer/configs/homerow/reset-count.sh"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "j"
                 },
@@ -399,16 +577,16 @@
                     "shell_command": "/Users/joaoleite/Developer/configs/homerow/reset-count.sh"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "slash"
                 },
@@ -420,16 +598,16 @@
                     "shell_command": "/Users/joaoleite/Developer/configs/homerow/reset-count.sh"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "i"
                 },
@@ -438,16 +616,16 @@
                     "shell_command": "open -a 'ChatGPT'"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "l"
                 },
@@ -456,16 +634,16 @@
                     "shell_command": "open -a 'Blender'"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "a"
                 },
@@ -474,16 +652,16 @@
                     "shell_command": "/Users/joaoleite/Developer/configs/hammerspoon/run.sh focusSafariProfile Arrow"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "m"
                 },
@@ -492,16 +670,16 @@
                     "shell_command": "/Users/joaoleite/Developer/configs/hammerspoon/run.sh focusSafariProfile Merkle"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "h"
                 },
@@ -510,16 +688,16 @@
                     "shell_command": "open -a 'Home Assistant'"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "a",
                   "modifiers": {
@@ -533,16 +711,16 @@
                     "shell_command": "/Users/joaoleite/Developer/configs/hammerspoon/run.sh openUrlInSafariProfile Arrow"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "m",
                   "modifiers": {
@@ -556,16 +734,16 @@
                     "shell_command": "/Users/joaoleite/Developer/configs/hammerspoon/run.sh openUrlInSafariProfile Merkle"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "b",
                   "modifiers": {
@@ -579,16 +757,16 @@
                     "shell_command": "/Users/joaoleite/Developer/configs/hammerspoon/run.sh openUrlInSafariProfile Personal"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               },
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "hyper_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": {
                   "key_code": "z",
                   "modifiers": {
@@ -602,13 +780,7 @@
                     "shell_command": "/opt/homebrew/bin/code /Users/joaoleite/Developer/configs"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_mode",
-                    "value": 1
-                  }
-                ]
+                "type": "basic"
               }
             ]
           }

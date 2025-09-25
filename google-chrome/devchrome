@@ -7,6 +7,25 @@ URL="http://localhost:3000"
 # remove previous created profiles
 rm -rf $FOLDER || true
 
+# create required folder structure for preferences
+mkdir -p "$FOLDER/Default"
+
+# write prefs to disable password saving
+cat > "$FOLDER/Default/Preferences" <<EOF
+{
+  "profile": {
+    "password_manager_enabled": false
+  },
+  "credentials_enable_service": false,
+  "sync_promo": {
+    "show_on_first_run_allowed": false
+  },
+  "signin": {
+    "allowed": false
+  }
+}
+EOF
+
 # open new chrome instance
 if [ "$(uname)" == "Darwin" ]; then
   EXECUTABLE="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
