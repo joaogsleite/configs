@@ -80,8 +80,12 @@ _G.focusDiscord = function(meeting)
   for _, win in ipairs(appWindows) do
     if meeting ~= helpers.endsWith(win:title(), "- Discord") then
       focusWindow(win)
-      return win
+      return true
     end
+  end
+  if not meeting then
+    hs.application.launchOrFocus("Discord")
+    return true
   end
   return false
 end
@@ -96,6 +100,10 @@ _G.focusTeams = function(meeting)
       focusWindow(win)
       return win
     end
+  end
+  if not meeting then
+    hs.application.launchOrFocus("Microsoft Teams")
+    return true
   end
   return false
 end

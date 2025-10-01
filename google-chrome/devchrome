@@ -1,8 +1,17 @@
 #!/usr/bin/env bash
 
+if [ "$1" == "-kill" ]; then
+  PIDFILE="/tmp/devchrome.pid"
+  if [ -f "$PIDFILE" ]; then
+    kill "$(cat "$PIDFILE")"
+    rm -f "$PIDFILE"
+  fi
+  exit
+fi
+
 # params
 FOLDER=/tmp/mychromeinstance
-URL="http://localhost:3000"
+URL=${1:-"http://localhost:3000"}
 
 # remove previous created profiles
 rm -rf $FOLDER || true
@@ -39,4 +48,7 @@ fi
   --disable-popup-blocking \
   --disable-translate \
   --user-data-dir=$FOLDER \
-  $URL
+  $URL \
+  > /dev/null 2>&1 &
+
+echo $! > /tmp/devchrome.pid
