@@ -289,7 +289,7 @@
     "when": "!editorIsOpen"
   },
   {
-    "key": "cmd+shift+c",
-    "command": "workbench.panel.chat"
+    "key": "shift+cmd+c",
+    "command": "chatgpt.openSidebar"
   }
 ]

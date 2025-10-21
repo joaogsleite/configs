@@ -31,6 +31,9 @@ cat > "$FOLDER/Default/Preferences" <<EOF
   },
   "signin": {
     "allowed": false
+  },
+  "omnibox": {
+    "prevent_url_elisions": true
   }
 }
 EOF

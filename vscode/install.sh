@@ -16,9 +16,14 @@ else
 	echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 fi
 
+# symlink for vscode config folder
 rm -rf $HOME/Library/Application\ Support/Code/User
 mkdir -p $HOME/Library/Application\ Support/Code
 ln -s $PWD/config $HOME/Library/Application\ Support/Code/User
+
+# symlink for codex config file
+rm -rf $HOME/.codex/config.toml
+ln -s $PWD/codex/config.toml $HOME/.codex/config.toml
 
 # install extensions
 cat ./extensions.txt | while read line

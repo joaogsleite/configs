@@ -1,0 +1,8 @@
+# Disable all approval prompts
+approval_policy = "never"
+
+# Choose how much access Codex has:
+#  - "workspace-write"  = edit files + run many read/diagnostic commands
+#  - "danger-full-access" = full terminal access (be careful)
+sandbox_mode = "workspace-write"
+# sandbox_mode = "danger-full-access"  # <- uncomment for full access
