@@ -169,7 +169,7 @@
                   }
                 ],
                 "from": { "key_code": "w" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace W" }],
+                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh W WhatsApp" }],
                 "type": "basic"
               },
               {
@@ -193,7 +193,7 @@
                   }
                 ],
                 "from": { "key_code": "r" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace R" }],
+                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh R Reminders" }],
                 "type": "basic"
               },
               {
@@ -205,7 +205,7 @@
                   }
                 ],
                 "from": { "key_code": "t" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace T" }],
+                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh T Microsoft Teams" }],
                 "type": "basic"
               },
               {
@@ -241,7 +241,7 @@
                   }
                 ],
                 "from": { "key_code": "i" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace I" }],
+                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh I ChatGPT" }],
                 "type": "basic"
               },
               {
@@ -253,7 +253,7 @@
                   }
                 ],
                 "from": { "key_code": "o" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace O" }],
+                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh O OrbStack" }],
                 "type": "basic"
               },
               {
@@ -301,7 +301,7 @@
                   }
                 ],
                 "from": { "key_code": "d" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace D" }],
+                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh D Discord" }],
                 "type": "basic"
               },
               {
@@ -325,7 +325,7 @@
                   }
                 ],
                 "from": { "key_code": "g" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace G" }],
+                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh G Gmail" }],
                 "type": "basic"
               },
               {
@@ -337,7 +337,7 @@
                   }
                 ],
                 "from": { "key_code": "h" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace H" }],
+                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh H Home Assistant" }],
                 "type": "basic"
               },
               {
@@ -361,7 +361,7 @@
                   }
                 ],
                 "from": { "key_code": "k" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace K" }],
+                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh K MacPass" }],
                 "type": "basic"
               },
               {
@@ -385,7 +385,7 @@
                   }
                 ],
                 "from": { "key_code": "z" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace Z" }],
+                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh Z Terminal" }],
                 "type": "basic"
               },
               {
@@ -421,7 +421,7 @@
                   }
                 ],
                 "from": { "key_code": "v" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace V" }],
+                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh V Visual Studio Code" }],
                 "type": "basic"
               },
               {
@@ -433,7 +433,7 @@
                   }
                 ],
                 "from": { "key_code": "b" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace B" }],
+                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh B Safari" }],
                 "type": "basic"
               },
               {
@@ -445,7 +445,7 @@
                   }
                 ],
                 "from": { "key_code": "n" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace N" }],
+                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh N Notes" }],
                 "type": "basic"
               },
               {
