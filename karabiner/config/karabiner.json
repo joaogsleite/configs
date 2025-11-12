@@ -1,977 +1,931 @@
 {
-  "global": { "show_in_menu_bar": false },
-  "profiles": [
-    {
-      "complex_modifications": {
-        "rules": [
-          {
-            "description": "Capslock as Leader key",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "caps_lock",
-                  "modifiers": { "optional": ["any"] }
-                },
-                "to": [
-                  {
-                    "set_variable": {
-                      "name": "hyper_mode",
-                      "value": 1
+    "global": { "show_in_menu_bar": false },
+    "profiles": [
+        {
+            "complex_modifications": {
+                "rules": [
+                    {
+                        "description": "Capslock as Leader key",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper_mode",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper_mode",
+                                            "value": 0
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Leader key shortcuts",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "up_arrow" },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace focus up" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "right_arrow" },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace focus right" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "down_arrow" },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace focus down" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "left_arrow" },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace focus left" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "up_arrow",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move up" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_arrow",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move right" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "down_arrow",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move down" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "left_arrow",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move left" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "q" },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace Q" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "w" },
+                                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh W WhatsApp" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "e" },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace E" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "r" },
+                                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh R Reminders" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "t" },
+                                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh T Microsoft Teams" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "y" },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace Y" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "u" },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace U" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "i" },
+                                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh I ChatGPT" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "o" },
+                                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh O OrbStack" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "p" },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace P" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "a" },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace A" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "s" },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace S" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "d" },
+                                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh D Discord" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "f" },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace F" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "g" },
+                                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh G Gmail" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "h" },
+                                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh H Home Assistant" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "k" },
+                                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh K MacPass" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "l" },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace L" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "z" },
+                                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh Z Terminal" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "x" },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace X" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "c" },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace C" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "v" },
+                                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh V Visual Studio Code" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "b" },
+                                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh B Safari" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "n" },
+                                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh N Notes" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "m" },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace M" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "q",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window Q" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window W" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "e",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window E" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "r",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window R" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "t",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window T" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "y",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window Y" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "u",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window U" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window I" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window O" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window P" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window A" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window S" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window D" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window F" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "g",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window G" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window H" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window K" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window L" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "z",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window Z" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "x",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window X" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window C" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "v",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window V" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "b",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window B" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window N" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "m",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window M" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "backslash" },
+                                "to": [
+                                    { "key_code": "f17" },
+                                    { "shell_command": "/Users/joaoleite/Developer/configs/homerow/reset-count.sh" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "j" },
+                                "to": [
+                                    { "key_code": "f18" },
+                                    { "shell_command": "/Users/joaoleite/Developer/configs/homerow/reset-count.sh" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "slash" },
+                                "to": [
+                                    { "key_code": "f19" },
+                                    { "shell_command": "/Users/joaoleite/Developer/configs/homerow/reset-count.sh" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "z",
+                                    "modifiers": { "mandatory": ["right_shift"] }
+                                },
+                                "to": [{ "shell_command": "/opt/homebrew/bin/code /Users/joaoleite/Developer/configs" }],
+                                "type": "basic"
+                            }
+                        ]
                     }
-                  }
-                ],
-                "to_after_key_up": [
-                  {
-                    "set_variable": {
-                      "name": "hyper_mode",
-                      "value": 0
-                    }
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Leader key shortcuts",
-            "manipulators": [
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "up_arrow" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace focus up" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "right_arrow" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace focus right" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "down_arrow" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace focus down" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "left_arrow" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace focus left" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": {
-                  "key_code": "up_arrow",
-                  "modifiers": { "mandatory": ["left_command"] }
+                ]
+            },
+            "devices": [
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 2609,
+                        "vendor_id": 13364
+                    },
+                    "ignore": false
                 },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move up" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": {
-                  "key_code": "right_arrow",
-                  "modifiers": { "mandatory": ["left_command"] }
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 2609,
+                        "vendor_id": 13364
+                    },
+                    "treat_as_built_in_keyboard": true
+                }
+            ],
+            "name": "Default profile",
+            "selected": true,
+            "simple_modifications": [
+                {
+                    "from": { "key_code": "f1" },
+                    "to": [{ "consumer_key_code": "display_brightness_decrement" }]
                 },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move right" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": {
-                  "key_code": "down_arrow",
-                  "modifiers": { "mandatory": ["left_command"] }
+                {
+                    "from": { "key_code": "f2" },
+                    "to": [{ "consumer_key_code": "display_brightness_increment" }]
                 },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move down" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": {
-                  "key_code": "left_arrow",
-                  "modifiers": { "mandatory": ["left_command"] }
+                {
+                    "from": { "key_code": "f10" },
+                    "to": [{ "consumer_key_code": "mute" }]
                 },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move left" }],
-                "type": "basic"
-              },
-
-
-
-
-
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "q" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace Q" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "w" },
-                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh W WhatsApp" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "e" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace E" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "r" },
-                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh R Reminders" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "t" },
-                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh T Microsoft Teams" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "y" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace Y" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "u" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace U" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "i" },
-                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh I ChatGPT" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "o" },
-                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh O OrbStack" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "p" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace P" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "a" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace A" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "s" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace S" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "d" },
-                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh D Discord" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "f" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace F" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "g" },
-                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh G Gmail" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "h" },
-                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh H Home Assistant" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "j" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace J" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "k" },
-                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh K MacPass" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "l" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace L" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "z" },
-                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh Z Terminal" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "x" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace X" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "c" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace C" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "v" },
-                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh V Visual Studio Code" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "b" },
-                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh B Safari" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "n" },
-                "to": [{ "shell_command": "/Users/joaoleite/Developer/configs/karabiner/scripts/workspace-with-app.sh N Notes" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "m" },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace workspace M" }],
-                "type": "basic"
-              },
-              
-
-
-
-
-
-
-
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "q",
-                  "modifiers": { "mandatory": ["left_command"] }
+                {
+                    "from": { "key_code": "f11" },
+                    "to": [{ "consumer_key_code": "volume_decrement" }]
                 },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window Q" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "w",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window W" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "e",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window E" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "r",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window R" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "t",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window T" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "y",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window Y" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "u",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window U" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "i",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window I" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "o",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window O" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "p",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window P" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "a",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window A" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "s",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window S" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "d",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window D" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "f",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window F" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "g",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window G" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "h",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window H" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "j",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window J" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "k",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window K" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "l",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window L" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "z",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window Z" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "x",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window X" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "c",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window C" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "v",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window V" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "b",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window B" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "n",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window N" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { 
-                  "key_code": "m",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window M" }],
-                "type": "basic"
-              },
-
-
-
-
-
-
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "backslash" },
-                "to": [
-                  { "key_code": "f17" },
-                  { "shell_command": "/Users/joaoleite/Developer/configs/homerow/reset-count.sh" }
-                ],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "j" },
-                "to": [
-                  { "key_code": "f18" },
-                  { "shell_command": "/Users/joaoleite/Developer/configs/homerow/reset-count.sh" }
-                ],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": { "key_code": "slash" },
-                "to": [
-                  { "key_code": "f19" },
-                  { "shell_command": "/Users/joaoleite/Developer/configs/homerow/reset-count.sh" }
-                ],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "name": "hyper_mode",
-                    "type": "variable_if",
-                    "value": 1
-                  }
-                ],
-                "from": {
-                  "key_code": "z",
-                  "modifiers": { "mandatory": ["right_shift"] }
-                },
-                "to": [{ "shell_command": "/opt/homebrew/bin/code /Users/joaoleite/Developer/configs" }],
-                "type": "basic"
-              }
-            ]
-          }
-        ]
-      },
-      "devices": [
-        {
-          "identifiers": {
-            "is_keyboard": true,
-            "is_pointing_device": true,
-            "product_id": 2609,
-            "vendor_id": 13364
-          },
-          "ignore": false
-        },
-        {
-          "identifiers": {
-            "is_keyboard": true,
-            "product_id": 2609,
-            "vendor_id": 13364
-          },
-          "treat_as_built_in_keyboard": true
+                {
+                    "from": { "key_code": "f12" },
+                    "to": [{ "consumer_key_code": "volume_increment" }]
+                }
+            ],
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
-      ],
-      "name": "Default profile",
-      "selected": true,
-      "simple_modifications": [
-        {
-          "from": { "key_code": "f1" },
-          "to": [{ "consumer_key_code": "display_brightness_decrement" }]
-        },
-        {
-          "from": { "key_code": "f2" },
-          "to": [{ "consumer_key_code": "display_brightness_increment" }]
-        },
-        {
-          "from": { "key_code": "f10" },
-          "to": [{ "consumer_key_code": "mute" }]
-        },
-        {
-          "from": { "key_code": "f11" },
-          "to": [{ "consumer_key_code": "volume_decrement" }]
-        },
-        {
-          "from": { "key_code": "f12" },
-          "to": [{ "consumer_key_code": "volume_increment" }]
-        }
-      ],
-      "virtual_hid_keyboard": { "keyboard_type_v2": "iso" }
-    }
-  ]
+    ]
 }
