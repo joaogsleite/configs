@@ -1,3 +1,2 @@
 hs.ipc.cliInstall()  -- installs the 'hs' CLI tool
-
-require('micmute'):init({}, "f5")
+hs.allowAppleScript(true) -- enables control hammerspoon through apple script

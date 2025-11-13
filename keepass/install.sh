@@ -13,6 +13,9 @@ if [ "$(uname)" == "Darwin" ]; then
   # install
   brew install --cask macpass
 
+  # install helper for Raycast
+  brew install --cask keepassxc
+
   # install Autotype plugin
   brew install jq unzip wget
   AUTOTYPE_DOWNLOAD_URL=$(curl -s https://api.github.com/repos/MacPass/AutotypeURL/releases/latest \
