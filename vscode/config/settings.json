@@ -62,7 +62,6 @@
   "terminal.integrated.stickyScroll.enabled": false,
   // Chat
   "chat.disableAIFeatures": true,
-  "chat.commandCenter.enabled": false,
   // Languages
   // -- Javascript
   "npm.packageManager": "pnpm",

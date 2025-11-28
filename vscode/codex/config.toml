@@ -5,4 +5,6 @@ approval_policy = "never"
 #  - "workspace-write"  = edit files + run many read/diagnostic commands
 #  - "danger-full-access" = full terminal access (be careful)
 sandbox_mode = "workspace-write"
+model = "gpt-5.1-codex-max"
+model_reasoning_effort = "medium"
 # sandbox_mode = "danger-full-access"  # <- uncomment for full access

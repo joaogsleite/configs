@@ -22,8 +22,8 @@ mkdir -p $HOME/Library/Application\ Support/Code
 ln -s $PWD/config $HOME/Library/Application\ Support/Code/User
 
 # symlink for codex config file
-rm -rf $HOME/.codex/config.toml
-ln -s $PWD/codex/config.toml $HOME/.codex/config.toml
+rm -rf $HOME/.codex
+ln -s $PWD/codex $HOME/.codex
 
 # install extensions
 cat ./extensions.txt | while read line
